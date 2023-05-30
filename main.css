@@ -1,0 +1,13 @@
+body{
+    background-color: #018281;
+}
+
+h1 {
+    font-size: 500%;
+}
+
+h1, p, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
