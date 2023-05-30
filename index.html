@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Mathew Johns</title>
 </head>
 <body>
     <nav>
-        <button onclick="openLinkedIn()">LinkedIn</button>
-        <button onclick="openGitHub()">GitHub</button>
+        <div class="menu-button" onclick="toggleMenu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <button class="linkedin-button" onclick="openLinkedIn()">
+            <i class="fa fa-linkedin"></i>
+        </button>
+        <button class="linkedin-button" onclick="openGitHub()">
+            <i class="fa fa-github"></i>
+        </button>
     </nav>
+    
     <main>
         <section id="about-me">
             <h1>Mathew Johns</h1>

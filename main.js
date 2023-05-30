@@ -1,6 +1,7 @@
 const text = "I promise this will get better.";
 const typingDelay = 50; // Delay in milliseconds between each character
 const typingTextEl = document.getElementById("typing-text");
+const menuButton = document.querySelector('.menu-button');
 
 let i = 0;
 function typeNextCharacter() {
@@ -17,6 +18,10 @@ function openLinkedIn() {
 
 function openGitHub() {
     window.open("https://github.com/matcodesalot", "_blank");
+}
+
+function toggleMenu() {
+    menuButton.classList.toggle('open');
 }
 
 typeNextCharacter();
