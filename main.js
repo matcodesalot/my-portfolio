@@ -1,4 +1,4 @@
-const text = "I promise this will get better.";
+const text = "Very much under construction.";
 const typingDelay = 50; // Delay in milliseconds between each character
 const typingText = document.getElementById("typing-text");
 const menuButton = document.querySelector('.menu-button');

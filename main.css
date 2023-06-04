@@ -6,10 +6,18 @@ h1 {
     font-size: 500%;
 }
 
-h1, p, a {
+h2 {
+    font-size: 250%;
+}
+
+h1, h2, p, a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.project-title {
+    text-decoration: underline;
 }
 
 .menu-button {
@@ -33,7 +41,7 @@ h1, p, a {
     position: absolute;
     height: 9px;
     width: 100%;
-    background: #000000;
+    background: #24292e;
     border-radius: 9px;
     opacity: 1;
     left: 0;
