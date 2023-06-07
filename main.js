@@ -1,18 +1,12 @@
-const text = "Very much under construction.";
-const typingDelay = 50; // Delay in milliseconds between each character
-const typingText = document.getElementById("typing-text");
-const menuButton = document.querySelector('.menu-button');
-
-let i = 0;
-function typeNextCharacter() {
-    if (i < text.length) {
-        typingText.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeNextCharacter, typingDelay);
-    }
-}
-typeNextCharacter();
+const menuButton = document.querySelector(".hamburger");
+const navigation = document.getElementById("navigation");
 
 function toggleMenu() {
-    menuButton.classList.toggle('open');
+    menuButton.classList.toggle("open");
+    if(navigation.style.display === "grid") {
+        navigation.style.display = "none";
+    }
+    else {
+        navigation.style.display = "grid";
+    }
 }

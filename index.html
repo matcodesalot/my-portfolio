@@ -4,46 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Mathew Johns</title>
 </head>
 <body>
-    <nav>
-        <div class="menu-button" onclick="toggleMenu()">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo">MJ</a>
+        </header>
+        <div class="content">
+            <h1>Hello World,<br>My name is <span>Mathew Johns</span></h1>
+            <p>I have a passion for all things technology related. Projects will look better soon I promise.</p>
+            <a href="#">Know More</a>
         </div>
-        <a href="https://www.linkedin.com/in/mathew-johns/" class="navigation-button-a" target="_blank" rel="noopener noreferrer">
-            <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/matcodesalot" class="navigation-button-a" target="_blank" rel="noopener noreferrer">
-            <i class="fa fa-github"></i>
-        </a>
-    </nav>
-    
-    <main>
-        <section id="about-me">
-            <h1>Mathew Johns</h1>
-            <p id="typing-text"></p>
-            <p>Email me if you want to:<a href="mailto:reallymathew@gmail.com">reallymathew@gmail.com</a></p>
-        </section>
+        <ul class="sci">
+            <li><a href="https://www.linkedin.com/in/mathew-johns/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/matcodesalot" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </ul>
+    </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-
-            <p class="project-title">Galaga</p>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="a-project">
+            <p>Galaga: </p>
             <a href="https://github.com/matcodesalot/galaga-arcade" target="_blank" rel="noopener noreferrer">Code</a>
             <a href="https://matcodesalot.github.io/galaga-arcade/" target="_blank" rel="noopener noreferrer">Demo</a>
-            
-            <p class="project-title">Pac-Man</p>
+        </div>
+        <div class="a-project">
+            <p>Pac-Man: </p>
             <a href="https://github.com/matcodesalot/pacman-arcade" target="_blank" rel="noopener noreferrer">Code</a>
             <a href="https://matcodesalot.github.io/pacman-arcade/" target="_blank" rel="noopener noreferrer">Demo</a>
-        </section>
-    </main>
-    
+        </div>
+    </section>
+    <nav id="navigation">
+        <ul>
+            <li><a href="#">. Home</a></li>
+            <li><a href="#Projects">. Projects</a></li>
+            <li><a href="#Resume">. Résumé</a></li>
+            <li><a href="#Contact">. Contact</a></li>
+        </ul>
+    </nav>
     <script src="main.js"></script>
 </body>
 </html>
