@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Oswald', sans-serif;
     margin: 0;
@@ -43,7 +47,7 @@ header .logo {
     flex-direction: row;
     right: 0px;
     top: 0;
-    z-index: 10000;
+    z-index: 10;
 }
 
 .sci .hamburger {
@@ -137,6 +141,7 @@ header .logo {
 
 .sci li a:hover {
     background: #fff;
+    color: #040014;
 }
 
 /* #navigation .open {
@@ -148,7 +153,7 @@ header .logo {
     top: 0;
     right: 0;
     width: 400px;
-    height: 50vh;
+    height: 100vh;
     background: #FE5F55;
     /* display: grid; */
     display: none;
@@ -173,6 +178,10 @@ header .logo {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
+}
+
+#navigation ul li a::before {
+    content: '. ';
 }
 
 #navigation ul li a:hover {
@@ -211,17 +220,17 @@ header .logo {
     font-weight: 500;
 }
 
-.projects .a-project {
+#projects .a-project {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.projects .a-project p, .projects .a-project a {
+#projects .a-project p, #projects .a-project a {
     display: inline;
     white-space: normal;
 }
 
-h2 {
+#projects h2 {
     text-decoration: underline;
 }
