@@ -2,58 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <title>Mathew Johns</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="app.css">
+    <title>My Portfolio</title>
 </head>
 <body>
-    <section class="banner" id="sec">
-        <header>
-            <a href="#" class="logo">MJ</a>
-        </header>
-        <div class="content">
-            <h1>Hello World,<br>My name is <span>Mathew Johns</span></h1>
-            <p>I have a passion for all things technology related. Projects will look better soon I promise.</p>
-            <a href="#projects">My Projects</a>
-        </div>
-        <ul class="sci">
-            <li><a href="https://www.linkedin.com/in/mathew-johns/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/matcodesalot" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+    <header>
+        <nav>
+            <a href="#" class="logo">mj</a>
+
             <div class="hamburger" onclick="toggleMenu()">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </div>
-        </ul>
+
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <ul class="links">
+                        <li><a href="mailto:reallymathew@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/mathew-johns/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/matcodesalot" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <h2>Hello World, my name is</h2>
+        <h1>Mathew Johns.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sunt incidunt a veritatis quia neque non id, nam illo nulla enim perspiciatis iste. Deserunt, pariatur ipsam neque blanditiis eum cupiditate.</p>
+        <div>
+            <a href="#projects">My Projects</a>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="a-project">
-            <p>Galaga: </p>
-            <a href="https://github.com/matcodesalot/galaga-arcade" target="_blank" rel="noopener noreferrer">Code</a>
-            <a href="https://matcodesalot.github.io/galaga-arcade/" target="_blank" rel="noopener noreferrer">Demo</a>
-        </div>
-        <div class="a-project">
-            <p>Pac-Man: </p>
-            <a href="https://github.com/matcodesalot/pacman-arcade" target="_blank" rel="noopener noreferrer">Code</a>
-            <a href="https://matcodesalot.github.io/pacman-arcade/" target="_blank" rel="noopener noreferrer">Demo</a>
-        </div>
-    </section>
-    <nav id="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Résumé</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="a-project">
+                <div>
+                    <h3>Galaga: </h3>
+                    <a href="https://github.com/matcodesalot/galaga-arcade" target="_blank" rel="noopener noreferrer">Code</a>
+                    <a href="https://matcodesalot.github.io/galaga-arcade/" target="_blank" rel="noopener noreferrer">Demo</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis accusantium dolor ipsam culpa, eius sequi explicabo est, vel velit tempora, dignissimos ad voluptates sit molestias? Officiis delectus at repudiandae repellat.</p>
+                </div>
+                <div>
+                    <img src="./assets/test.jpg" alt="Picture of my Galaga game">
+                </div>
+            </li>
+            <li class="a-project">
+                <div>
+                    <h3>Pac-Man: </h3>
+                    <a href="https://github.com/matcodesalot/pacman-arcade" target="_blank" rel="noopener noreferrer">Code</a>
+                    <a href="https://matcodesalot.github.io/pacman-arcade/" target="_blank" rel="noopener noreferrer">Demo</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis accusantium dolor ipsam culpa, eius sequi explicabo est, vel velit tempora, dignissimos ad voluptates sit molestias? Officiis delectus at repudiandae repellat.</p>
+                </div>
+                <div>
+                    <img src="./assets/test.jpg" alt="Picture of my Pacman game">
+                </div>
+            </li>
+            <li class="a-project">
+                <div>
+                    <h3>Placeholder: </h3>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis accusantium dolor ipsam culpa, eius sequi explicabo est, vel velit tempora, dignissimos ad voluptates sit molestias? Officiis delectus at repudiandae repellat.</p>
+                </div>
+                <div>
+                    <img src="./assets/test.jpg" alt="Picture of my project">
+                </div>
+            </li>
+            <li class="a-project">
+                <div>
+                    <h3>Placeholder: </h3>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Code</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis accusantium dolor ipsam culpa, eius sequi explicabo est, vel velit tempora, dignissimos ad voluptates sit molestias? Officiis delectus at repudiandae repellat.</p>
+                </div>
+                <div>
+                    <img src="./assets/test.jpg" alt="Picture of my project">
+                </div>
+            </li>
         </ul>
-    </nav>
-    <script src="main.js"></script>
+    </section>
+
+    <script src="src/main.js"></script>
 </body>
 </html>
