@@ -40,6 +40,7 @@ nav .hamburger {
     height: 40px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -107,25 +108,46 @@ nav .hamburger.open .line:nth-child(4) {
     left: 50%;
 }
 
-.navigation {
+.container {
     position: fixed;
     top: 0;
     right: 0;
     width: 75%;
     height: 100vh;
     background: #FE5F55;
-    /* display: grid; */
+    /* display: flex; */
     display: none;
-    place-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation ul {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+}
+
+.links ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 40px;
 }
 
 .navigation ul li a {
+    color: #040014;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.links ul li a {
     color: #040014;
     text-decoration: none;
     display: inline-block;
@@ -143,22 +165,16 @@ nav .hamburger.open .line:nth-child(4) {
     text-decoration: underline;
 }
 
-.navigation ul .links {
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.navigation ul .links a::before {
+.links ul li a::before {
     content: none;
 }
 
-.navigation ul .links a:hover {
+.links ul li a:hover {
     color: white;
 }
 
 #banner {
     position: relative;
-    /* width: 100%; */
     min-height: 100vh;
     padding: 50px;
     background-color: #040014;
@@ -172,7 +188,7 @@ nav .hamburger.open .line:nth-child(4) {
 #banner h1 {
     color: #51e5ff;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
@@ -227,72 +243,43 @@ img {
 
 
 @media (min-width: 768px) {
-    nav {
-        padding: 40px 100px;
-        position: static;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        padding: 20px 50px;
-    }
-
-    nav .hamburger {
+    .hamburger {
         display: none;
     }
 
-    header .logo {
-        font-size: 2.5em;
-    }
-
-    .navigation {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: auto;
-        height: auto;
-        place-items: center;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 0;
+        align-items: flex-start;
         background-color: #04001400;
-        display: flex;
-        justify-content: space-between;
     }
 
-    .navigation ul {
-        position: relative;
+    .navigation ul, .links ul {
+        position: fixed;
+        top: 20px;
+        right: 50px;
         display: flex;
-        flex-direction: row;
-        gap: 40px;
         justify-content: space-between;
-        padding: 40px 100px;
+        flex-direction: row;
+        gap: 20px;
     }
-    
-    .navigation ul li a {
+
+    .navigation ul li a, .links ul li a {
         color: #51e5ff;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 2em;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-size: 1em;
     }
-    
-    .navigation ul li a::before {
-        content: '. ';
-    }
-    
-    .navigation ul li a:hover {
-        text-decoration: underline;
-    }
-    
-    .navigation ul .links {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .navigation ul .links a::before {
+
+    .links ul li a::before {
         content: none;
     }
-    
-    .navigation ul .links a:hover {
+
+    .links ul li a:hover {
         color: #ead2ac;
+    }
+    
+    #banner div {
+        align-items: flex-start;
     }
 }
