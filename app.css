@@ -5,38 +5,41 @@ html {
 }
 
 header {
-    position: fixed;
+    position: static;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    top: 0;
-    left: 0;
     z-index: 1;
-    /* background-color: #040014; */
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     align-items: center;
-    padding: 20px 50px;
 }
 
 header .logo {
+    position: absolute;
+    top: 20px;
+    left: 50px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 2.5em;
     text-transform: uppercase;
+    z-index: 1;
 }
 
-header .hamburger {
+nav {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    z-index: 1;
+}
+
+nav .hamburger {
     width: 60px;
     height: 40px;
     position: relative;
     cursor: pointer;
-    z-index: 2;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -47,7 +50,7 @@ header .hamburger {
     transition: .5s ease-in-out;
 }
 
-header .hamburger .line {
+nav .hamburger .line {
     display: block;
     position: absolute;
     height: 9px;
@@ -66,39 +69,39 @@ header .hamburger .line {
     transition: .25s ease-in-out;
 }
 
-header .hamburger .line:nth-child(1) {
+nav .hamburger .line:nth-child(1) {
     top: 0px;
 }
   
-header .hamburger .line:nth-child(2),header .hamburger .line:nth-child(3) {
+nav .hamburger .line:nth-child(2),nav .hamburger .line:nth-child(3) {
     top: 15px;
 }
   
-header .hamburger .line:nth-child(4) {
+nav .hamburger .line:nth-child(4) {
     top: 30px;
 }
   
-header .hamburger.open .line:nth-child(1) {
+nav .hamburger.open .line:nth-child(1) {
     top: 15px;
     width: 0%;
     left: 50%;
 }
   
-header .hamburger.open .line:nth-child(2) {
+nav .hamburger.open .line:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
   
-header .hamburger.open .line:nth-child(3) {
+nav .hamburger.open .line:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
   
-header .hamburger.open .line:nth-child(4) {
+nav .hamburger.open .line:nth-child(4) {
     top: 15px;
     width: 0%;
     left: 50%;
@@ -171,7 +174,7 @@ header .hamburger.open .line:nth-child(4) {
     font-weight: bold;
     font-size: 3em;
     margin-bottom: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 #banner h2 {
@@ -224,11 +227,17 @@ img {
 
 
 @media (min-width: 768px) {
-    header nav {
+    nav {
         padding: 40px 100px;
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 20px 50px;
     }
-    
-    header .hamburger {
+
+    nav .hamburger {
         display: none;
     }
 
@@ -243,7 +252,7 @@ img {
         width: auto;
         height: auto;
         place-items: center;
-        background-color: #040014;
+        background-color: #04001400;
         display: flex;
         justify-content: space-between;
     }
