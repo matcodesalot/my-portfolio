@@ -5,11 +5,9 @@ html {
 }
 
 header {
-    position: static;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    z-index: 1;
     align-items: center;
 }
 
@@ -23,6 +21,9 @@ header .logo {
     font-size: 2.5em;
     text-transform: uppercase;
     z-index: 1;
+    border-top: 4px solid #51e5ff;
+    border-left: 4px solid #51e5ff;
+    padding: 10px;
 }
 
 nav {
@@ -31,7 +32,6 @@ nav {
     right: 50px;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
     z-index: 1;
 }
 
@@ -231,9 +231,63 @@ nav .hamburger.open .line:nth-child(4) {
     transform: translateY(-0.25em);
 }
 
+#projects {
+    background-color: #040014;
+}
+
+#projects h2 {
+    font-size: 2em;
+    color: white;
+    border-top: 4px solid #51e5ff;
+    border-left: 4px solid #51e5ff;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    width: 2.8em;
+}
+
+.a-project {
+    border: 1px solid black;
+    border-radius: 0.8em;
+    margin: 10px;
+    background-color: #ead2ac;
+    line-height: normal;
+}
+
+.a-project h3 {
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.a-project .project-links {
+    text-align: center;
+}
+
+.a-project a {
+    text-align: center;
+    text-decoration: none;
+    color: indigo;
+    margin: 5px;
+}
+
+.a-project a:hover {
+    text-decoration: underline;
+}
+
+.a-project p {
+    margin: 10px;
+}
+
 img {
-    width: 50px;
-    height: 50px;
+    width: 25%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
 }
 
 
@@ -269,6 +323,10 @@ img {
     .navigation ul li a, .links ul li a {
         color: #51e5ff;
         font-size: 1em;
+    }
+
+    .navigation ul li a {
+        margin: 10px 0 10px 10px;
     }
 
     .links ul li a::before {
