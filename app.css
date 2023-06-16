@@ -20,7 +20,7 @@ header .logo {
     font-weight: bold;
     font-size: 2.5em;
     text-transform: uppercase;
-    z-index: 1;
+    z-index: 2;
     border-top: 4px solid #51e5ff;
     border-left: 4px solid #51e5ff;
     padding: 8px 0 0 10px;
@@ -34,7 +34,7 @@ nav {
     right: 50px;
     display: flex;
     justify-content: flex-end;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav .hamburger {
@@ -42,7 +42,7 @@ nav .hamburger {
     height: 40px;
     position: relative;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -173,6 +173,10 @@ nav .hamburger.open .line:nth-child(4) {
 
 .links ul li a:hover {
     color: white;
+}
+
+#banner, #projects {
+    z-index: 1;
 }
 
 #banner {
@@ -321,11 +325,10 @@ nav .hamburger.open .line:nth-child(4) {
     padding: 50px;
     background-color: #3babbe;
     display: flex;
-    flex-direction: flex-start;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: normal;
-    z-index: -1;
 }
 
 #contact div {
