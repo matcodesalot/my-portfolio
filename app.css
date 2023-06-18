@@ -4,175 +4,141 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+body {
+    isolation: isolate;
 }
 
-header .logo {
+header {
     position: absolute;
-    top: 20px;
-    left: 50px;
+    width: 100%;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.navbar .logo {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 2.5em;
     text-transform: uppercase;
-    z-index: 2;
     border-top: 4px solid #51e5ff;
     border-left: 4px solid #51e5ff;
-    padding: 8px 0 0 10px;
+    padding: 8px 0 0 8px;
+    margin: 20px 50px;
     letter-spacing: 2px;
     font-family: 'Schibsted Grotesk', sans-serif;
 }
 
-nav {
-    position: fixed;
-    top: 28px;
-    right: 50px;
-    display: flex;
-    justify-content: flex-end;
-    z-index: 2;
+#check {
+    display: none;
 }
 
-nav .hamburger {
+.navbar-container input[type="checkbox"], .navbar-container .hamburger {
+    display: block;
+    z-index: 1;
+}
+
+.navbar-container .hamburger {
     width: 60px;
     height: 40px;
-    position: relative;
+    position: fixed;
+    top: 30px;
+    right: 50px;
     cursor: pointer;
-    z-index: 2;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
 }
 
-nav .hamburger .line {
+.navbar-container .hamburger .line {
     display: block;
     position: absolute;
     height: 9px;
     width: 100%;
     background-color: white;
     border-radius: 9px;
-    opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    transition-duration: 0.25s;
 }
 
-nav .hamburger .line:nth-child(1) {
-    top: 0px;
+.hamburger .line:nth-child(1) {
+    top: 0;
 }
-  
-nav .hamburger .line:nth-child(2),nav .hamburger .line:nth-child(3) {
+
+.hamburger .line:nth-child(2) {
     top: 15px;
 }
-  
-nav .hamburger .line:nth-child(4) {
+
+.hamburger .line:nth-child(3) {
     top: 30px;
 }
-  
-nav .hamburger.open .line:nth-child(1) {
+
+.navbar-container input[type="checkbox"]:checked + .hamburger .line:nth-child(1) {
     top: 15px;
-    width: 0%;
-    left: 50%;
-}
-  
-nav .hamburger.open .line:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-  
-nav .hamburger.open .line:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-  
-nav .hamburger.open .line:nth-child(4) {
+
+.navbar-container input[type="checkbox"]:checked + .hamburger .line:nth-child(2) {
     top: 15px;
-    width: 0%;
-    left: 50%;
+    transform: rotate(45deg);
 }
 
-.container {
+.navbar-container input[type="checkbox"]:checked + .hamburger .line:nth-child(3) {
+    top: 15px;
+    transform: rotate(135deg);
+}
+
+.navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    right: 0;
+}
+
+.menu-items {
+    display: flex;
     position: fixed;
     top: 0;
-    right: 0;
-    width: 75%;
+    right: -100%;
+    width: 75%; 
     height: 100vh;
-    background: #FE5F55;
-    /* display: flex; */
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    background: #2c3e50;
+    text-align: center;
+    transition: all 0.25s;
 }
 
-.navigation ul {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.links ul {
-    position: relative;
+.social-links {
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
-    gap: 40px;
+    gap: 20px;
 }
 
-.navigation ul li a {
+.menu-items li a {
     color: #040014;
     text-decoration: none;
-    display: inline-block;
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
-    margin: 10px;
 }
 
-.links ul li a {
-    color: #040014;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2em;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.navigation ul li a::before {
+.menu-items li a::before {
     content: '. ';
 }
 
-.navigation ul li a:hover {
+.menu-items li a:hover {
     text-decoration: underline;
 }
 
-.links ul li a::before {
+.social-links li a::before {
     content: none;
 }
 
-.links ul li a:hover {
-    color: white;
+.social-links li a:hover {
+    color: #ead2ac;
 }
 
 #banner {
@@ -185,7 +151,6 @@ nav .hamburger.open .line:nth-child(4) {
     align-items: flex-start;
     justify-content: center;
     line-height: normal;
-    z-index: 1;
 }
 
 #banner h1 {
@@ -244,7 +209,6 @@ nav .hamburger.open .line:nth-child(4) {
     align-items: flex-start;
     justify-content: center;
     line-height: normal;
-    z-index: 1;
 }
 
 #projects h2 {
@@ -316,18 +280,18 @@ nav .hamburger.open .line:nth-child(4) {
 }
 
 #contact {
+    display: flex;
     position: sticky;
     position: -webkit-sticky;
     bottom: 0;
-    /* left: 0; */
     min-height: 100vh;
     padding: 50px;
     background-color: #3babbe;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: normal;
+    z-index: -1;
 }
 
 #contact div {
@@ -346,12 +310,16 @@ nav .hamburger.open .line:nth-child(4) {
 
 
 
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
 
-    .container {
+
+
+
+@media (min-width: 768px) {
+    /* .navbar input[type="checkbox"], .navbar .hamburger {
+        display: none;
+    } */
+
+    /* .container {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -385,7 +353,7 @@ nav .hamburger.open .line:nth-child(4) {
 
     .links ul li a:hover {
         color: #ead2ac;
-    }
+    } */
     
     #banner div {
         align-items: flex-start;
