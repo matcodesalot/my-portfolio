@@ -1,12 +1,10 @@
-const menuButton = document.querySelector(".hamburger");
-const navContainer = document.querySelector(".container");
-
-function toggleMenu() {
-    menuButton.classList.toggle("open");
-    if(navContainer.style.display === "flex") {
-        navContainer.style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+    const check = document.getElementById("check");
+    const links = document.querySelectorAll(".menu-links");
+    
+    for(const link of links) {
+        link.addEventListener("click", () => {
+            check.checked = false;
+        });
     }
-    else {
-        navContainer.style.display = "flex";
-    }
-}
+});
