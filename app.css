@@ -125,7 +125,7 @@ header {
 }
 
 .menu-items li a {
-    color: var(--dark-blue);
+    color: var(--light-blue);
     text-decoration: none;
     font-size: 2em;
     font-weight: 600;
@@ -258,7 +258,7 @@ header {
 #projects {
     position: relative;
     min-height: 100vh;
-    padding: 0 50px;
+    padding: 50px;
     background-color: #040014;
     display: flex;
     flex-direction: column;
@@ -356,27 +356,40 @@ header {
     align-items: center;
 }
 
+#contact div .social-links {
+    font-size: 2em;
+    gap: 80px;
+    /* flex-direction: row-reverse; */
+    flex-direction: column-reverse;
+    margin: 2em;
+    text-align: center;
+}
+
 #contact div h2 {
     font-size: 2em;
     text-align: center;
 }
 
 #contact div a {
-    font-size: 1em;
     color: var(--light-blue);
+    text-decoration: none;
 }
 
 #contact div a:hover {
-    font-size: 1em;
     color: var(--tan);
+    text-decoration: underline;
 }
 
-#contact div .social-links {
+#contact div a i {
     font-size: 2em;
-    gap: 55px;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin: 2em;
+}
+
+#contact div a i:hover{
+    text-decoration: none;
+}
+
+#contact div a p {
+    font-size: 0.5em;
 }
 
 footer {
