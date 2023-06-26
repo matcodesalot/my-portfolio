@@ -249,7 +249,7 @@ header {
 }
 
 #banner div a:hover {
-    border-color: #ead2ac;
+    border-color: var(--tan);
     color: var(--dark-blue);
     box-shadow: 0 0.5em 0.5em -0.4em var(--tan);
     transform: translateY(-0.25em);
@@ -258,8 +258,8 @@ header {
 #projects {
     position: relative;
     min-height: 100vh;
-    padding: 50px;
-    background-color: #040014;
+    padding: 50px 50px 0 50px;
+    background-color: var(--dark-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -417,48 +417,55 @@ footer p {
 
 
 @media (min-width: 768px) {
-    /* .navbar input[type="checkbox"], .navbar .hamburger {
+    .navbar input[type="checkbox"], .navbar .hamburger {
         display: none;
-    } */
+    }
 
-    /* .container {
-        display: flex;
+    .navbar .logo {
+        margin: 40px 100px;
+        transition-duration: 0.25s;
+    }
+
+    .navbar .logo:hover {
+        font-size: 3em;
+        transition-duration: 0.25s;
+    }
+
+    .menu-items {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        background: none;
         flex-direction: row;
-        justify-content: flex-end;
-        width: 0;
-        align-items: flex-start;
-        background-color: #04001400;
+        padding: 8px 8px 0 0;
+        margin: 50px 100px;
+        gap: 40px;
     }
 
-    .navigation ul, .links ul {
-        position: fixed;
-        top: 20px;
-        right: 50px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        gap: 20px;
+    .menu-items .social-links {
+        display: none;
     }
 
-    .navigation ul li a, .links ul li a {
-        color: #51e5ff;
-        font-size: 1em;
+    #banner {
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 100px;
     }
-
-    .navigation ul li a {
-        margin: 10px 0 10px 10px;
-    }
-
-    .links ul li a::before {
-        content: none;
-    }
-
-    .links ul li a:hover {
-        color: #ead2ac;
-    } */
     
     #banner .content div {
-        display: flex;
         justify-content: flex-start;
+    }
+
+    #projects {
+        padding: 100px 100px 0 100px;
+    }
+
+
+
+
+    #contact {
+        padding: 100px 100px 0 100px;
     }
 }
